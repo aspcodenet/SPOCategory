@@ -1,0 +1,10 @@
+﻿@model List<CategoryWeb.Models.Categories>
+
+<h2>Hej från Ajax i vyn</h2>
+<ul>
+    @foreach (var cat in Model)
+    {
+        <li>@cat.CategoryName - @cat.Description</li>
+    }
+</ul>
+

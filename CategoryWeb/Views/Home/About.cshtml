@@ -1,0 +1,25 @@
+﻿@model List<CategoryWeb.Models.Categories>
+
+
+<ul>
+    @foreach (var cat in Model)
+    {
+        <li>@cat.CategoryName</li>
+    }
+</ul>
+
+<hr />
+<input type="button" value="Uppdatera listan nedan" 
+       onclick="Fetch()" />
+
+<div id="fetchcats">
+    Här kommer kategorier vid click (Ajax)
+</div>
+
+<script type="text/javascript">
+    function Fetch() {
+        $("#fetchcats").load("/Home/FetchCatsSortedByLength");
+
+    }
+</script>
+
